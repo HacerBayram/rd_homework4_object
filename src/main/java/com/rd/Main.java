@@ -2,24 +2,24 @@ package com.rd;
 
 public class Main {
     public static void main(String[] args) {
+        Department itDepartment = new Department("IT Department");
 
-        Employess employee1 = new Employess();
-        Employess employee2 = new Employess();
+        Employee employee1 = new Employee(1,"Hacer","Software Tester");
+        Employee employee2 = new Employee(2,"Elif","Product Owner");
+        Employee employee3 = new Employee(3,"Serra","Scrum Master");
+        Employee employee4 = new Employee(4,"Kemal","Sofware Developer");
 
-        employee1.ID= 1;
-        employee1.Name = "Hacer";
-        employee1.Surname = "Bayram";
-        employee1.Age=29;
-        employee1.Department= "IT";
+        itDepartment.addEmployee(employee1);
+        itDepartment.addEmployee(employee2);
+        itDepartment.addEmployee(employee3);
+        itDepartment.addEmployee(employee4);
 
-        employee2.ID =2;
-        employee2.Name ="Selin";
-        employee2.Surname = "Tektas";
-        employee2.Age=25;
-        employee2.Department= "Finance";
+        for (Employee employee : itDepartment.listEmployees()) {
+            System.out.println(employee);
+        }
 
-        employee1.added();
-        employee2.added();
+
+
 
         }
     }
